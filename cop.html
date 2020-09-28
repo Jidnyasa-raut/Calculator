@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewpoint" content="width=device-width, idex-scale=1.0">
+		<title >Calculator</title>
+	    <script>
+      function dis(val) 
+		{ 
+			document.getElementById("result").value+=val 
+		} 
+		function answer() 
+		{ 
+			let x = document.getElementById("result").value 
+			let y = eval(x) 
+			document.getElementById("result").value = y 
+		} 
+	
+    </script>
+		<style> 
+			.title{ 
+			margin-bottom: 20px; 
+			text-align:center; 
+			background-color: cadetblue;
+			width: 200px; 
+			color:black; 
+			border: solid black 2px; 
+			} 
+		
+			input[type="button"] 
+			{ 
+			background-color:burlywood; 
+			color: black; 
+			border: solid black 2px; 
+			width:100% 
+			} 
+		
+			input[type="text"] 
+			{ 
+			background-color:blanchedalmond; 
+			border: solid black 1px; 
+			width:100% 
+			} 
+		</style> 
+	</head>
+	<body>
+	
+			<table border="4 " align="center"> 
+				<th  colspan="4">
+				<strong>Calculator</strong>
+				</th>
+		<tr> 
+			<td colspan="4"><input type="text" id="result"/></td> 
+			
+		</tr> 
+		 
+
+        <tr> 
+        
+            <td><input type="button" value="1" onclick="dis('1')"/> </td> 
+            <td><input type="button" value="2" onclick="dis('2')"/> </td> 
+            <td><input type="button" value="3" onclick="dis('3')"/> </td> 
+            <td><input type="button" value="/" onclick="dis('/')"/> </td> 
+        </tr> 
+        <tr> 
+            <td><input type="button" value="4" onclick="dis('4')"/> </td> 
+            <td><input type="button" value="5" onclick="dis('5')"/> </td> 
+            <td><input type="button" value="6" onclick="dis('6')"/> </td> 
+            <td><input type="button" value="-" onclick="dis('-')"/> </td> 
+        </tr> 
+        <tr> 
+            <td><input type="button" value="7" onclick="dis('7')"/> </td> 
+            <td><input type="button" value="8" onclick="dis('8')"/> </td> 
+            <td><input type="button" value="9" onclick="dis('9')"/> </td> 
+            <td><input type="button" value="+" onclick="dis('+')"/> </td> 
+        </tr> 
+        <tr> 
+            <td><input type="button" value="." onclick="dis('.')"/> </td> 
+            <td><input type="button" value="0" onclick="dis('0')"/> </td> 
+           
+            <td><input type="button" value="=" onclick="answer()"/> </td> 
+            <td><input type="button" value="*" onclick="dis('*')"/> </td> 
+        </tr>
+		</table>
+	</body>
+</html>
